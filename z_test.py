@@ -13,6 +13,9 @@ from flask import Response
 from flask import Flask, redirect, render_template, jsonify, make_response
 from flask import request, session
 
+import flask_sqlalchemy
+from sqlalchemy import create_engine
+
 # 测试创建一个CBV
 class TestView(views.MethodView):
     methods = ['GET', 'POST']
@@ -28,3 +31,10 @@ class TestView(views.MethodView):
         res = make_response('new hello.world')
         res.headers['author_name'] = 'zhangjiaqi'
         return res
+
+if __name__ == "__main__":
+    def test():
+        print(a)
+
+    a = 10
+    test()
